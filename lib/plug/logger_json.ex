@@ -99,7 +99,8 @@ defmodule Plug.LoggerJSON do
     req_headers = format_map_list(conn.req_headers)
 
     %{
-      "api_version"     => Map.get(req_headers, "accept", "N/A"),
+      "client_ip"       => format_ip(Map.get(req_headers, "x-forwarded-for", "N/A")),
+      "client_version"  => client_version(req_headers),
       "date_time"       => iso8601(:calendar.now_to_datetime(:os.timestamp)),
       "duration"        => Float.round(duration / 1000, 3),
       "log_type"        => "http",
@@ -127,8 +128,6 @@ defmodule Plug.LoggerJSON do
     req_params  = format_map_list(conn.params)
 
     %{
-      "client_ip"       => format_ip(Map.get(req_headers, "x-forwarded-for", "N/A")),
-      "client_version"  => client_version(req_headers),
       "params"          => req_params,
     }
   end
