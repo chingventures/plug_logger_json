@@ -51,7 +51,6 @@ defmodule Plug.LoggerJSONTest do
       |> remove_colors
       |> Poison.decode!
 
-    assert map["api_version"] == "N/A"
     assert map["client_ip"] == "N/A"
     assert map["client_version"] == "N/A"
     assert map["date_time"]
@@ -75,7 +74,6 @@ defmodule Plug.LoggerJSONTest do
       |> remove_colors
       |> Poison.decode!
 
-    assert map["api_version"] == "N/A"
     assert map["client_ip"] == "N/A"
     assert map["client_version"] == "N/A"
     assert map["date_time"]
@@ -100,7 +98,6 @@ defmodule Plug.LoggerJSONTest do
       |> remove_colors
       |> Poison.decode!
 
-    assert map["api_version"] == "N/A"
     assert map["client_ip"] == "N/A"
     assert map["client_version"] == "N/A"
     assert map["date_time"]
@@ -131,7 +128,6 @@ defmodule Plug.LoggerJSONTest do
       |> remove_colors
       |> Poison.decode!
 
-    assert map["api_version"] == "N/A"
     assert map["client_ip"] == "N/A"
     assert map["client_version"] == "N/A"
     assert map["date_time"]
@@ -163,7 +159,6 @@ defmodule Plug.LoggerJSONTest do
       |> remove_colors
       |> Poison.decode!
 
-    assert map["api_version"] == "N/A"
     assert map["client_ip"] == "209.49.75.165"
     assert map["client_version"] == "N/A"
     assert map["date_time"]
