@@ -1,5 +1,17 @@
 # Changelog
 
+## Master
+* Add Erlang/OTP 19.3 to test suite
+
+## v0.4.0
+* Breaking Changes!
+* Log errors with logger level `error` instead of `info`
+* Change `status` field to an integer type instead of string
+* Drop official support of Elixir 1.2 and OTP 18
+* Add support for Elixir 1.4 and OTP 19.1 & 19.2
+* Update depedencies
+* Fix dialyzer warnings
+
 ## v0.3.1
 * Update depedencies
 * Fix Elixir 1.4 warnings

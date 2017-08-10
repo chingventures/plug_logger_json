@@ -61,7 +61,7 @@ defmodule Plug.LoggerJSONTest do
     assert map["params"] == %{}
     assert map["path"] == "/"
     assert map["request_id"] == nil
-    assert map["status"] == "200"
+    assert map["status"] == 200
   end
 
   test "correct output - params and headers" do
@@ -84,7 +84,7 @@ defmodule Plug.LoggerJSONTest do
     assert map["params"] == %{"fake_param" => "1"}
     assert map["path"] == "/"
     assert map["request_id"] == nil
-    assert map["status"] == "200"
+    assert map["status"] == 200
   end
 
   test "correct output - Phoenix" do
@@ -108,7 +108,7 @@ defmodule Plug.LoggerJSONTest do
     assert map["params"] == %{}
     assert map["path"] == "/"
     assert map["request_id"] == nil
-    assert map["status"] == "200"
+    assert map["status"] == 200
   end
 
   test "correct output - Post request JSON" do
@@ -143,7 +143,7 @@ defmodule Plug.LoggerJSONTest do
     }}
     assert map["path"] == "/"
     assert map["request_id"] == nil
-    assert map["status"] == "200"
+    assert map["status"] == 200
   end
 
   test "correct output - X-forwarded-for header" do
@@ -169,7 +169,7 @@ defmodule Plug.LoggerJSONTest do
     assert map["params"] == %{}
     assert map["path"] == "/"
     assert map["request_id"] == nil
-    assert map["status"] == "200"
+    assert map["status"] == 200
   end
 
   test "correct output - client version header" do
